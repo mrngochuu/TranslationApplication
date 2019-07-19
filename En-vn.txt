@@ -1,7 +1,11 @@
+dada : làm
 do : làm, thực hiện
 father : ba, thầy, bố
+haha : làm
 he : anh ấy
 hello : xin chào, chào
+her : cô ấy
+hihi : làm
 I : mình, tôi, tớ, tao
 learn : học
 network : mạng
@@ -11,3 +15,4 @@ she : cô ấy
 sleep : ngủ
 soup : súp, canh
 study : học
+work : làm

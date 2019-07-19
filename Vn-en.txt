@@ -4,10 +4,10 @@ bố : father
 canh : soup
 chào : hello
 chơi : play
-cô ấy : she
+cô ấy : she, her
 cơm : rice
 học : study, learn
-làm : do
+làm : do, haha, work, dada, hihi
 mình : I
 mạng : network
 ngủ : sleep

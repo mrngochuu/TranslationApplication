@@ -14,21 +14,9 @@ import java.util.Vector;
 public class Node {
 
     private Volcabulary root;
-    private int size;
-    private Vector data;
 
-    public Vector getData() {
-        return data;
-    }
-
-    public void setData(Vector data) {
-        this.data = data;
-    }
-    
     public Node() {
         this.root = null;
-        this.size = 0;
-        this.data = new Vector();
     }
 
     public Volcabulary getRoot() {
@@ -39,14 +27,6 @@ public class Node {
         this.root = root;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public void addNewVolcabulary(Volcabulary newVolcabulary) {
         Volcabulary p = root;
         Volcabulary parent = null;
@@ -54,21 +34,20 @@ public class Node {
             parent = p;
             if(p.getName().compareToIgnoreCase(newVolcabulary.getName()) > 0) {
                 p = p.getLeft();
-            } else {
+            } else if (p.getName().compareToIgnoreCase(newVolcabulary.getName()) < 0){
                 p = p.getRight();
+            } else {
+                break;
             }
         }
         
         if (root == null) {
             root = newVolcabulary;
-            size++;
         } else {
             if (parent.getName().compareToIgnoreCase(newVolcabulary.getName()) > 0) {
                 parent.setLeft(newVolcabulary);
-                size++;
             } else if(parent.getName().compareToIgnoreCase(newVolcabulary.getName()) < 0){
                 parent.setRight(newVolcabulary);
-                size++;
             } else {
                 for (String string : newVolcabulary.getMeaning()) {
                     if(!parent.checkMeaningExist(string)) {
